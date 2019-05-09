@@ -20,16 +20,18 @@ public class Vaisseau {
     }
 
 	private boolean estOrdoneeCouverte(int y) {
-		return (ordoneeLaPlusBasse()<=y) && (y<=ordonneLaPlusHaute());
+		return (ordoneeLaPlusHaute()<=y) && (y<=ordoneeLaPlusBasse());
 	}
-
-	private int ordonneLaPlusHaute() {
-		return ordonneLaPlusHaute()-this.dimension.hauteur()+1;
-	}
-
-	private int ordoneeLaPlusBasse() {
+	
+	public int ordoneeLaPlusBasse() {
 		return this.origine.ordonnee();		
 	}
+	
+	public int ordoneeLaPlusHaute() {
+		return ordoneeLaPlusBasse()-this.dimension.hauteur()+1;
+	}
+
+	
 
 	private boolean estAbscisseCouverte(int x) {
 		return (abscisseLaPlusAGauche()<=x) && (x<=abscisseLaPlusADroite());
