@@ -20,14 +20,14 @@ public class Vaisseau {
     }
 
 	private boolean estOrdoneeCouverte(int y) {
-		return (ordoneeLaPlusHaute()<=y) && (y<=ordonneLaPlusBasse());
+		return (ordoneeLaPlusBasse()<=y) && (y<=ordonneLaPlusHaute());
 	}
 
-	private int ordonneLaPlusBasse() {
-		return ordonneLaPlusBasse()-this.dimension.hauteur()+1;
+	private int ordonneLaPlusHaute() {
+		return ordonneLaPlusHaute()-this.dimension.hauteur()+1;
 	}
 
-	private int ordoneeLaPlusHaute() {
+	private int ordoneeLaPlusBasse() {
 		return this.origine.ordonnee();		
 	}
 
