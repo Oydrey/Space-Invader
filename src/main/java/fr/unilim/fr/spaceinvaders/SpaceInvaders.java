@@ -12,7 +12,12 @@ public class SpaceInvaders implements Jeu {
     
     @Override
 	public void evoluer(Commande commandeUser) {
-		this.deplacerVaisseauVersLaDroite();
+		if (commandeUser.droite) {
+			this.deplacerVaisseauVersLaDroite();
+		}
+		if (commandeUser.gauche) {
+			this.deplacerVaisseauVersLaGauche();
+		}
 	}
 
 	@Override
