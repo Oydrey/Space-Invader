@@ -22,7 +22,7 @@ public abstract class Sprite {
 			
 	}
 
-	private boolean estOrdoneeCouverte(int y) {
+	public boolean estOrdoneeCouverte(int y) {
 		return (ordoneeLaPlusBasse()<=y) && (y<=ordoneeLaPlusHaute());
 	}
 
@@ -34,7 +34,7 @@ public abstract class Sprite {
 		return ordoneeLaPlusHaute()-this.dimension.hauteur()+1;
 	}
 
-	private boolean estAbscisseCouverte(int x) {
+	public boolean estAbscisseCouverte(int x) {
 		return (abscisseLaPlusAGauche()<=x) && (x<=abscisseLaPlusADroite());
 	}
 

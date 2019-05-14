@@ -7,10 +7,11 @@ public class Constante {
 		
 		public static final int VAISSEAU_LONGUEUR = 60;
 	    public static final int VAISSEAU_HAUTEUR = 20;
-	    public static final int VAISSEAU_VITESSE = 8;
+	    public static final int VAISSEAU_VITESSE = 5;
 		
 	    public static final char MARQUE_FIN_DE_LIGNE = '\n';
 	    public static final char MARQUE_VIDE = '.';
 	    public static final char MARQUE_VAISSEAU = 'V';
+		public static final char MARQUE_MISSILE = 'M';
 		
 }
