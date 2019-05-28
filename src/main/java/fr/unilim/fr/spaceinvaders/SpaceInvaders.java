@@ -136,7 +136,7 @@ public class SpaceInvaders implements Jeu {
 
 	public void deplacerMissile() {
 		this.missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);
-		if (missile.ordoneeLaPlusHaute()>this.hauteur) {
+		if (missile.ordoneeLaPlusHaute()<this.hauteur-this.hauteur) {
 			this.missile = (Missile) this.missile.detruire();
 		}
 	}
