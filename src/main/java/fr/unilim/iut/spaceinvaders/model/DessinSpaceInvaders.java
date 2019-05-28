@@ -26,11 +26,18 @@ public class DessinSpaceInvaders implements DessinJeu {
 		crayon.fillRect(x, y, dx, dy);
 	}
 	
+	private void dessinerEnvahisseur(int x, int y, int dx, int dy, BufferedImage im) {
+		Graphics2D crayon = (Graphics2D) im.getGraphics();
+		crayon.setColor(Color.GREEN);
+		crayon.fillOval(x, y, dx, dy);
+	}
+	
 	@Override
 	public void dessiner(BufferedImage image) {
 		SpaceInvaders j = (SpaceInvaders) jeu;
 		Vaisseau vaisseau = j.getVaisseau();
-
+		Envahisseur envahisseur = j.getEnvahisseur();
+		
 		this.dessinerVaisseau(vaisseau.origine.abscisse(),
 				vaisseau.ordoneeLaPlusBasse(),
 				vaisseau.dimension.longueur(),
@@ -43,6 +50,11 @@ public class DessinSpaceInvaders implements DessinJeu {
 					missile.dimension.longueur(),
 					missile.dimension.hauteur(),image);
 		}
+		
+		this.dessinerEnvahisseur(envahisseur.origine.abscisse(), 
+				envahisseur.ordoneeLaPlusBasse(), 
+				envahisseur.dimension.longueur(), 
+				envahisseur.dimension.hauteur(), image);
 		
 	}
 
