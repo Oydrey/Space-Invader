@@ -6,6 +6,7 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 
 import fr.unilim.fr.spaceinvaders.utils.*;
+import fr.unilim.iut.spaceinvaders.model.*;
 
     public class SpaceInvadersTest {
     	
@@ -269,11 +270,9 @@ import fr.unilim.fr.spaceinvaders.utils.*;
 
  	   spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(7,2),new Position(5,9), 1);
  	   spaceinvaders.tirerUnMissile(new Dimension(3,2),1);
- 	   for (int i = 1; i <=6 ; i++) {
+ 	   for (int i = 1; i <=8 ; i++) {
  		   spaceinvaders.deplacerMissile();
  	   }
- 	   
- 	   spaceinvaders.deplacerMissile();
  	   
         assertEquals("" +
         "...............\n" + 

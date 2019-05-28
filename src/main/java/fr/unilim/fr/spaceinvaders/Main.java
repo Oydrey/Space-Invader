@@ -1,6 +1,7 @@
 package fr.unilim.fr.spaceinvaders;
 
-import fr.unilim.iut.spaceinvaders.moteurjeu.MoteurGraphique;
+import fr.unilim.iut.spaceinvaders.model.*;
+import fr.unilim.iut.spaceinvaders.moteurjeu.*;
 
 public class Main {
 
